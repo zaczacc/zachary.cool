@@ -14,31 +14,23 @@ body{
 }
 
 h1{
+	color:white;
+	margin-top:10px
 	text-shadow: 3px 2px grey;
 	font-size: 80px;
 	text-indent:80px;
 }
 h3{
 	color:white;
-	padding:10px 10px;
 	font-style:italic;
-	text-align:center;
-	font-size: 60px;
+	text-align:right;
+	font-size: 32px;
 }
 p{
 	color:black;
 	padding:15px 30px;
 }
-#parallelogram {
-	padding:400px 580px 800px;
-    width: 150px;
-    height: 80px;
-    background: rgb(0,46,167);
-    -webkit-transform: skew(30deg);
-    -moz-transform: skew(30deg);
-    -o-transform: skew(30deg);
-    transform: skew(30deg);
-    border:black;
+
 
 }
 
@@ -66,6 +58,11 @@ p{
 
 
 h2{
-	color:black;
+	color:white;
 	padding:15px 30px;
+}
+
+p{
+	color:white;
+	font-size: 20px
 }
