@@ -1,0 +1,59 @@
+
+
+@import url(//fonts.googleapis.com/css?family=IBM+Plex+Mono);
+
+/*--------------------------------------------------------
+ Typography
+--------------------------------------------------------*/
+body {
+  font-family: "IBM Plex Mono";
+}
+
+h1 {
+      margin: 0 0 20px 0;
+      padding: 0;
+      font-size: 5em;
+    }
+
+/*------Small caps, including buttons------*/
+h4 {
+  font-family: "IBM Plex Mono";
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h4 a{
+  color: black;
+  text-decoration: none;
+}
+
+/*------Main body------*/
+
+h3 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+/*ul,li{ list-style:none; }*/
+
+ul {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0 0 45px;
+  color: black;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+}
+
+li:hover{
+  list-style-type: circle;
+}

@@ -1,0 +1,228 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Main.css">  
+    <style>
+        body {
+            margin: 0;
+            height:100vh;
+            overflow-y: hidden;
+        }
+
+        /*--------------------------------------------------------
+        LAYOUT
+        --------------------------------------------------------*/
+        
+        #sideNav{
+            height: 100%;
+            width: 50px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.2s;
+            padding-top: 0px;
+            border-right: 2px solid black;
+        }
+        
+        #sideNavButton{
+            position: absolute;
+            right:0;
+            top: 50%;
+            height:30px;
+            width:35px;
+            padding: 0;
+            cursor: pointer;
+        }
+        
+        .sideNavContainer {
+            margin-right: 50px;
+            height: 100%;
+            padding: 0;
+            width: 300px;
+            float: right;
+            transition: 0.1s;
+            overflow-x: hidden;
+            /*border-right: 1px solid black;
+            box-sizing: border-box;*/
+        }
+
+        .button {
+            display: block;
+            position: relative;
+            box-sizing: border-box;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            border-top: 2px solid black;
+        }
+
+        .button:hover {
+            cursor: pointer;
+        }
+
+        #homeButton{
+            border-top: none;
+            border-bottom: 2px solid black;
+        }
+
+        .fill:before {
+            content: "";
+            position: absolute;
+            background: #e51010;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            -webkit-transition: left 0.18s ease-in;
+        }
+
+        .fill:hover:before {
+            left: 0;
+        }
+
+        #menu {
+            margin: 40px 0 0 20px;
+            padding: 0;
+        }
+
+        #sideNavBase {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 20px;
+            overflow: hidden;
+        }
+
+        #main{
+            transition: margin-left .2s;
+            margin: 0 0 0 50px;
+            height:100%;
+        }
+
+        .mainIFrame{
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /*--------------------------------------------------------
+        Menu button
+        --------------------------------------------------------*/
+
+        .bar1, .bar2 {
+            width: 20px;
+            height: 2px;
+            margin:0;
+            padding:0;
+            background-color: #333;
+            transition: 0.5s;
+        }
+
+        .bar1 {
+             -webkit-transform: translate(0px, 0px) rotate(45deg);
+            transform: translate(0px, 0px) rotate(45deg)  ;
+        }
+
+        .bar2 {
+             -webkit-transform: translate(0px, 11px) rotate(-45deg);
+            transform: translate(0px, 11px) rotate(-45deg)  ;
+        }
+
+        .change .bar1 {
+            -webkit-transform: translate(0px, 0px) rotate(-45deg);
+            transform: translate(0px, 0px) rotate(-45deg);
+        }
+
+        .change .bar2 {
+            -webkit-transform: translate(0px, 11px) rotate(45deg);
+            transform: translate(0px, 11px) rotate(45deg);
+        }
+
+        /*--------------------------------------------------------
+        Mobile only content
+        --------------------------------------------------------*/
+        .mobileShow {
+            display: none;
+            background-color: #cce7ff;
+            height: 100vh;
+            width: 100vw;
+            padding: 20px;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 999;
+        } 
+
+        /* Smartphone Portrait and Landscape */ 
+        @media only screen 
+        and (min-device-width : 320px) 
+        and (max-device-width : 480px){ 
+            .mobileShow {display: block;}
+            .mainIFrame{display: none;}
+        }
+</style>
+
+    
+</head>
+
+
+
+<body>
+    <div class="mobileShow"> 
+        <h3> Since you're on a business card sized screen, here is one:
+            <br>
+            <br>
+            zachary.cool
+    </h3></div>
+
+    <div id="sideNav">
+        <div id="sideNavButton" class="change">
+            <div id="bar1" class="bar1"></div>
+            <div id="bar2" class="bar2"></div>
+        </div>
+        <div id="sideNavContainer" class="sideNavContainer" style="margin-right: 0px;">
+            <h4 ><a href="Home.html" target="mainIFrame" id="homeButton" class="fill button">zachary.cool</a></h4>
+            <div id="menu">
+                <h3>Discover</h3>
+                <ul>
+                    <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfLw37j1G5pIkQaSzXQluG1fDevznA9LtahSO1TOW85P3S8yi2Q1yAFqg4IkhQTiej5-SpPKa29kAb/pubhtml?gid=0&amp;chrome=false" class="link-2" target="mainIFrame">Photos</a></li>
+                    <li><a href="https://docs.google.com/document/d/e/2PACX-1vTSJN_a7WrQqmFY_z8x_OZR9TAzhLNpZeP0yYluj-_8jOT7FILqF0Gp7RO__58vlmIE9XwZbBpGEk40/pub?embedded=true" class="link-2" target="mainIFrame">Sounds</a></li>
+                    <li><a href="https://docs.google.com/document/d/1nInWIkDwbvtOx28bEg6TIMJnBx9HZVyGhW5Uqte4PR8/edit?usp=sharing" class="link-2" target="mainIFrame">Thoughts</a></li>
+                </ul>
+            </div>
+            <div id="sideNavBase">
+                <h4><a href="http://itszacharycoolyoo.chatango.com/" target="mainIFrame" class="fill button">Chat⟶</a></h4>
+            </div>
+        </div>
+    </div>
+    
+    <div id="main">
+        <iframe name="mainIFrame" class="mainIFrame" src="Home.html"></iframe>
+    </div>
+
+    <script>
+        $(document).ready( function(){
+            $('#sideNavButton').click( function() {
+                var adjuster = $("#sideNav").width() == 300 ? "50px" : "300px";
+                var adjuster2 = $("#sideNav").width() == 300? "50px" : "0px";
+                console.log(adjuster2);
+                $('#sideNav').animate({ width: adjuster });
+                $('#main').animate({ marginLeft: adjuster });
+                $('#sideNavButton').toggleClass("change");
+                $('#sideNavContainer').animate({ marginRight: adjuster2 });
+            });
+        });
+
+    </script>
+
+
+
+</body></html>
